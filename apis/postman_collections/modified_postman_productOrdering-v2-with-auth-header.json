@@ -1,0 +1,2839 @@
+{
+  "item": [
+    {
+      "id": "e20771c7-93c9-47b6-be53-538d3976cf67",
+      "name": "productOrder",
+      "item": [
+        {
+          "id": "13aaef65-1539-45d7-b69c-0a6dbf66ec4a",
+          "name": "Request Opening Order",
+          "request": {
+            "name": "Request Opening Order",
+            "description": {},
+            "url": {
+              "path": [
+                "productOrder"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "x-request-id",
+                "value": "{{x-request-id}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "x-service-host",
+                "value": "{{x-service-host}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"order\": {\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"associatedDocumentDate\": \"{{associatedDocumentDate}}\",\n            \"type\": \"{{type}}\",\n            \"infraType\": \"{{infraType}}\",\n            \"customer\": {\n                \"customer\": {\n                    \"name\": \"{{name}}\",\n                    \"subscriberId\": \"{{subscriberId}}\",\n                    \"phoneNumber\": {\n                        \"phoneNumbers\": [\n                            \"{{phoneNumbers}}\"\n                        ]\n                    },\n                    \"subscriberIdOld\": \"{{subscriberIdOld}}\",\n                    \"businessUnity\": \"{{businessUnity}}\",\n                    \"fantasyName\": \"{{fantasyName}}\",\n                    \"workContact\": {\n                        \"name\": \"{{workContact.name}}\",\n                        \"email\": \"{{email}}\",\n                        \"phone\": \"{{phone}}\"\n                    }\n                }\n            },\n            \"appointment\": {\n                \"appointment\": {\n                    \"hasSlot\": \"{{hasSlot}}\",\n                    \"mandatoryType\": \"{{mandatoryType}}\",\n                    \"date\": \"{{date}}\",\n                    \"workOrderId\": \"{{workOrderId}}\"\n                }\n            },\n            \"addresses\": {\n                \"addresses\": {\n                    \"address\": {\n                        \"id\": \"{{id}}\",\n                        \"inventoryId\": \"{{inventoryId}}\",\n                        \"reference\": \"{{reference}}\",\n                        \"complement\": {\n                            \"complement\": {\n                                \"value\": \"{{value}}\"\n                            }\n                        }\n                    }\n                }\n            },\n            \"addressChange\": {\n                \"flag\": \"{{flag}}\"\n            },\n            \"products\": {\n                \"products\": {\n                    \"product\": [\n                        \"{{product}}\"\n                    ]\n                }\n            },\n            \"equipments\": {\n                \"equipments\": {\n                    \"equipment\": [\n                        \"{{equipment}}\"\n                    ]\n                }\n            },\n            \"issue\": {\n                \"issue\": {\n                    \"code\": {\n                        \"code\": \"{{code.code}}\"\n                    },\n                    \"description\": {\n                        \"description\": \"{{description.description}}\"\n                    },\n                    \"type\": \"{{issue.issue.type}}\",\n                    \"observation\": \"{{observation}}\",\n                    \"updateDate\": \"{{updateDate}}\",\n                    \"action\": \"{{action}}\",\n                    \"task\": \"{{task}}\",\n                    \"fieldActivity\": \"{{fieldActivity}}\",\n                    \"reason\": \"{{reason}}\"\n                }\n            },\n            \"orderItem\": [\n                \"{{orderItem}}\"\n            ],\n            \"task\": {\n                \"code\": {\n                    \"code\": \"{{order.order.task.code.code}}\"\n                },\n                \"description\": \"{{order.order.task.description}}\",\n                \"updateDate\": \"{{order.order.task.updateDate}}\",\n                \"action\": \"{{order.order.task.action}}\"\n            }\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3b3d86a9-b2ac-4b11-afb4-c39fe2a0f34b",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "productOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-request-id",
+                    "value": "{{x-request-id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-service-host",
+                    "value": "{{x-service-host}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"order\": {\n        \"correlationOrder\": \"{{correlationOrder}}\",\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"associatedDocumentDate\": \"{{associatedDocumentDate}}\",\n        \"type\": \"{{type}}\",\n        \"infraType\": \"{{infraType}}\",\n        \"customer\": {\n            \"name\": \"{{name}}\",\n            \"subscriberId\": \"{{subscriberId}}\",\n            \"businessUnity\": \"{{businessUnity}}\",\n            \"fantasyName\": \"{{fantasyName}}\",\n            \"phoneNumber\": {\n                \"phoneNumbers\": [\n                    \"{{phoneNumbers}}\"\n                ]\n            },\n            \"workContact\": {\n                \"name\": \"{{workContact.name}}\",\n                \"email\": \"{{email}}\",\n                \"phone\": \"{{phone}}\"\n            }\n        },\n        \"appointment\": {\n            \"hasSlot\": \"{{hasSlot}}\",\n            \"date\": \"{{date}}\",\n            \"mandatoryType\": \"{{mandatoryType}}\",\n            \"workOrderId\": \"{{workOrderId}}\"\n        },\n        \"addresses\": {\n            \"address\": {\n                \"id\": \"{{id}}\",\n                \"inventoryId\": \"{{inventoryId}}\",\n                \"reference\": \"{{reference}}\",\n                \"complement\": {\n                    \"complements\": [\n                        \"{{complements}}\"\n                    ]\n                }\n            }\n        },\n        \"products\": {\n            \"product\": [\n                \"{{product}}\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"control\": {\n    \"type\": \"S\",\n    \"code\": \"201\",\n    \"message\": \"Created\"\n  },\n  \"order\": {\n    \"id\": \"20230315000001\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7bb1dcdc-e1f6-44d7-afba-9de94b2459e5",
+              "name": "BadRequest",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "productOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-request-id",
+                    "value": "{{x-request-id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-service-host",
+                    "value": "{{x-service-host}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"order\": {\n        \"correlationOrder\": \"{{correlationOrder}}\",\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"associatedDocumentDate\": \"{{associatedDocumentDate}}\",\n        \"type\": \"{{type}}\",\n        \"infraType\": \"{{infraType}}\",\n        \"customer\": {\n            \"name\": \"{{name}}\",\n            \"subscriberId\": \"{{subscriberId}}\",\n            \"businessUnity\": \"{{businessUnity}}\",\n            \"fantasyName\": \"{{fantasyName}}\",\n            \"phoneNumber\": {\n                \"phoneNumbers\": [\n                    \"{{phoneNumbers}}\"\n                ]\n            },\n            \"workContact\": {\n                \"name\": \"{{workContact.name}}\",\n                \"email\": \"{{email}}\",\n                \"phone\": \"{{phone}}\"\n            }\n        },\n        \"appointment\": {\n            \"hasSlot\": \"{{hasSlot}}\",\n            \"date\": \"{{date}}\",\n            \"mandatoryType\": \"{{mandatoryType}}\",\n            \"workOrderId\": \"{{workOrderId}}\"\n        },\n        \"addresses\": {\n            \"address\": {\n                \"id\": \"{{id}}\",\n                \"inventoryId\": \"{{inventoryId}}\",\n                \"reference\": \"{{reference}}\",\n                \"complement\": {\n                    \"complements\": [\n                        \"{{complements}}\"\n                    ]\n                }\n            }\n        },\n        \"products\": {\n            \"product\": [\n                \"{{product}}\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"400\",\n    \"message\": \"Bad Request\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "527a1e39-6125-4f05-b4ef-5eef3e24e9a6",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "productOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-request-id",
+                    "value": "{{x-request-id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-service-host",
+                    "value": "{{x-service-host}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"order\": {\n        \"correlationOrder\": \"{{correlationOrder}}\",\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"associatedDocumentDate\": \"{{associatedDocumentDate}}\",\n        \"type\": \"{{type}}\",\n        \"infraType\": \"{{infraType}}\",\n        \"customer\": {\n            \"name\": \"{{name}}\",\n            \"subscriberId\": \"{{subscriberId}}\",\n            \"businessUnity\": \"{{businessUnity}}\",\n            \"fantasyName\": \"{{fantasyName}}\",\n            \"phoneNumber\": {\n                \"phoneNumbers\": [\n                    \"{{phoneNumbers}}\"\n                ]\n            },\n            \"workContact\": {\n                \"name\": \"{{workContact.name}}\",\n                \"email\": \"{{email}}\",\n                \"phone\": \"{{phone}}\"\n            }\n        },\n        \"appointment\": {\n            \"hasSlot\": \"{{hasSlot}}\",\n            \"date\": \"{{date}}\",\n            \"mandatoryType\": \"{{mandatoryType}}\",\n            \"workOrderId\": \"{{workOrderId}}\"\n        },\n        \"addresses\": {\n            \"address\": {\n                \"id\": \"{{id}}\",\n                \"inventoryId\": \"{{inventoryId}}\",\n                \"reference\": \"{{reference}}\",\n                \"complement\": {\n                    \"complements\": [\n                        \"{{complements}}\"\n                    ]\n                }\n            }\n        },\n        \"products\": {\n            \"product\": [\n                \"{{product}}\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"401\",\n    \"message\": \"Unauthorized\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "17eea7b4-fb8d-457f-b451-40e4e63926e7",
+              "name": "Forbidden - Scope Not Permitted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "productOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-request-id",
+                    "value": "{{x-request-id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-service-host",
+                    "value": "{{x-service-host}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"order\": {\n        \"correlationOrder\": \"{{correlationOrder}}\",\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"associatedDocumentDate\": \"{{associatedDocumentDate}}\",\n        \"type\": \"{{type}}\",\n        \"infraType\": \"{{infraType}}\",\n        \"customer\": {\n            \"name\": \"{{name}}\",\n            \"subscriberId\": \"{{subscriberId}}\",\n            \"businessUnity\": \"{{businessUnity}}\",\n            \"fantasyName\": \"{{fantasyName}}\",\n            \"phoneNumber\": {\n                \"phoneNumbers\": [\n                    \"{{phoneNumbers}}\"\n                ]\n            },\n            \"workContact\": {\n                \"name\": \"{{workContact.name}}\",\n                \"email\": \"{{email}}\",\n                \"phone\": \"{{phone}}\"\n            }\n        },\n        \"appointment\": {\n            \"hasSlot\": \"{{hasSlot}}\",\n            \"date\": \"{{date}}\",\n            \"mandatoryType\": \"{{mandatoryType}}\",\n            \"workOrderId\": \"{{workOrderId}}\"\n        },\n        \"addresses\": {\n            \"address\": {\n                \"id\": \"{{id}}\",\n                \"inventoryId\": \"{{inventoryId}}\",\n                \"reference\": \"{{reference}}\",\n                \"complement\": {\n                    \"complements\": [\n                        \"{{complements}}\"\n                    ]\n                }\n            }\n        },\n        \"products\": {\n            \"product\": [\n                \"{{product}}\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"403\",\n    \"message\": \"Forbidden - Scope Not Permitted\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bd762619-18e1-4be4-96b9-4b1d6f7386ae",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "productOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-request-id",
+                    "value": "{{x-request-id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-service-host",
+                    "value": "{{x-service-host}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"order\": {\n        \"correlationOrder\": \"{{correlationOrder}}\",\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"associatedDocumentDate\": \"{{associatedDocumentDate}}\",\n        \"type\": \"{{type}}\",\n        \"infraType\": \"{{infraType}}\",\n        \"customer\": {\n            \"name\": \"{{name}}\",\n            \"subscriberId\": \"{{subscriberId}}\",\n            \"businessUnity\": \"{{businessUnity}}\",\n            \"fantasyName\": \"{{fantasyName}}\",\n            \"phoneNumber\": {\n                \"phoneNumbers\": [\n                    \"{{phoneNumbers}}\"\n                ]\n            },\n            \"workContact\": {\n                \"name\": \"{{workContact.name}}\",\n                \"email\": \"{{email}}\",\n                \"phone\": \"{{phone}}\"\n            }\n        },\n        \"appointment\": {\n            \"hasSlot\": \"{{hasSlot}}\",\n            \"date\": \"{{date}}\",\n            \"mandatoryType\": \"{{mandatoryType}}\",\n            \"workOrderId\": \"{{workOrderId}}\"\n        },\n        \"addresses\": {\n            \"address\": {\n                \"id\": \"{{id}}\",\n                \"inventoryId\": \"{{inventoryId}}\",\n                \"reference\": \"{{reference}}\",\n                \"complement\": {\n                    \"complements\": [\n                        \"{{complements}}\"\n                    ]\n                }\n            }\n        },\n        \"products\": {\n            \"product\": [\n                \"{{product}}\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"404\",\n    \"message\": \"Not Found\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9c096850-6f50-484e-b18c-adbc2b439a71",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "productOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-request-id",
+                    "value": "{{x-request-id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-service-host",
+                    "value": "{{x-service-host}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"order\": {\n        \"correlationOrder\": \"{{correlationOrder}}\",\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"associatedDocumentDate\": \"{{associatedDocumentDate}}\",\n        \"type\": \"{{type}}\",\n        \"infraType\": \"{{infraType}}\",\n        \"customer\": {\n            \"name\": \"{{name}}\",\n            \"subscriberId\": \"{{subscriberId}}\",\n            \"businessUnity\": \"{{businessUnity}}\",\n            \"fantasyName\": \"{{fantasyName}}\",\n            \"phoneNumber\": {\n                \"phoneNumbers\": [\n                    \"{{phoneNumbers}}\"\n                ]\n            },\n            \"workContact\": {\n                \"name\": \"{{workContact.name}}\",\n                \"email\": \"{{email}}\",\n                \"phone\": \"{{phone}}\"\n            }\n        },\n        \"appointment\": {\n            \"hasSlot\": \"{{hasSlot}}\",\n            \"date\": \"{{date}}\",\n            \"mandatoryType\": \"{{mandatoryType}}\",\n            \"workOrderId\": \"{{workOrderId}}\"\n        },\n        \"addresses\": {\n            \"address\": {\n                \"id\": \"{{id}}\",\n                \"inventoryId\": \"{{inventoryId}}\",\n                \"reference\": \"{{reference}}\",\n                \"complement\": {\n                    \"complements\": [\n                        \"{{complements}}\"\n                    ]\n                }\n            }\n        },\n        \"products\": {\n            \"product\": [\n                \"{{product}}\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Acceptable",
+              "code": 406,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"406\",\n    \"message\": \"Not Acceptable (AssociatedDocument já existente/utilizado)\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2babb02d-93c5-458b-83d1-31871d1c717b",
+              "name": "Too Many Requests - Exceeded Quota",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "productOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-request-id",
+                    "value": "{{x-request-id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-service-host",
+                    "value": "{{x-service-host}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"order\": {\n        \"correlationOrder\": \"{{correlationOrder}}\",\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"associatedDocumentDate\": \"{{associatedDocumentDate}}\",\n        \"type\": \"{{type}}\",\n        \"infraType\": \"{{infraType}}\",\n        \"customer\": {\n            \"name\": \"{{name}}\",\n            \"subscriberId\": \"{{subscriberId}}\",\n            \"businessUnity\": \"{{businessUnity}}\",\n            \"fantasyName\": \"{{fantasyName}}\",\n            \"phoneNumber\": {\n                \"phoneNumbers\": [\n                    \"{{phoneNumbers}}\"\n                ]\n            },\n            \"workContact\": {\n                \"name\": \"{{workContact.name}}\",\n                \"email\": \"{{email}}\",\n                \"phone\": \"{{phone}}\"\n            }\n        },\n        \"appointment\": {\n            \"hasSlot\": \"{{hasSlot}}\",\n            \"date\": \"{{date}}\",\n            \"mandatoryType\": \"{{mandatoryType}}\",\n            \"workOrderId\": \"{{workOrderId}}\"\n        },\n        \"addresses\": {\n            \"address\": {\n                \"id\": \"{{id}}\",\n                \"inventoryId\": \"{{inventoryId}}\",\n                \"reference\": \"{{reference}}\",\n                \"complement\": {\n                    \"complements\": [\n                        \"{{complements}}\"\n                    ]\n                }\n            }\n        },\n        \"products\": {\n            \"product\": [\n                \"{{product}}\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"429\",\n    \"message\": \"Too Many Requests - Exceeded Quota\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f779b823-ffe7-4d39-99b8-18d0a1ce2a8d",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "productOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-request-id",
+                    "value": "{{x-request-id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-service-host",
+                    "value": "{{x-service-host}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"order\": {\n        \"correlationOrder\": \"{{correlationOrder}}\",\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"associatedDocumentDate\": \"{{associatedDocumentDate}}\",\n        \"type\": \"{{type}}\",\n        \"infraType\": \"{{infraType}}\",\n        \"customer\": {\n            \"name\": \"{{name}}\",\n            \"subscriberId\": \"{{subscriberId}}\",\n            \"businessUnity\": \"{{businessUnity}}\",\n            \"fantasyName\": \"{{fantasyName}}\",\n            \"phoneNumber\": {\n                \"phoneNumbers\": [\n                    \"{{phoneNumbers}}\"\n                ]\n            },\n            \"workContact\": {\n                \"name\": \"{{workContact.name}}\",\n                \"email\": \"{{email}}\",\n                \"phone\": \"{{phone}}\"\n            }\n        },\n        \"appointment\": {\n            \"hasSlot\": \"{{hasSlot}}\",\n            \"date\": \"{{date}}\",\n            \"mandatoryType\": \"{{mandatoryType}}\",\n            \"workOrderId\": \"{{workOrderId}}\"\n        },\n        \"addresses\": {\n            \"address\": {\n                \"id\": \"{{id}}\",\n                \"inventoryId\": \"{{inventoryId}}\",\n                \"reference\": \"{{reference}}\",\n                \"complement\": {\n                    \"complements\": [\n                        \"{{complements}}\"\n                    ]\n                }\n            }\n        },\n        \"products\": {\n            \"product\": [\n                \"{{product}}\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"control\": {\n    \"type\": \"T\",\n    \"code\": \"500\",\n    \"message\": \"Internal Server Error\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6ed0d572-cf0b-4343-91eb-b2bc3ddd37d2",
+              "name": "Service Unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "productOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-request-id",
+                    "value": "{{x-request-id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-service-host",
+                    "value": "{{x-service-host}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"order\": {\n        \"correlationOrder\": \"{{correlationOrder}}\",\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"associatedDocumentDate\": \"{{associatedDocumentDate}}\",\n        \"type\": \"{{type}}\",\n        \"infraType\": \"{{infraType}}\",\n        \"customer\": {\n            \"name\": \"{{name}}\",\n            \"subscriberId\": \"{{subscriberId}}\",\n            \"businessUnity\": \"{{businessUnity}}\",\n            \"fantasyName\": \"{{fantasyName}}\",\n            \"phoneNumber\": {\n                \"phoneNumbers\": [\n                    \"{{phoneNumbers}}\"\n                ]\n            },\n            \"workContact\": {\n                \"name\": \"{{workContact.name}}\",\n                \"email\": \"{{email}}\",\n                \"phone\": \"{{phone}}\"\n            }\n        },\n        \"appointment\": {\n            \"hasSlot\": \"{{hasSlot}}\",\n            \"date\": \"{{date}}\",\n            \"mandatoryType\": \"{{mandatoryType}}\",\n            \"workOrderId\": \"{{workOrderId}}\"\n        },\n        \"addresses\": {\n            \"address\": {\n                \"id\": \"{{id}}\",\n                \"inventoryId\": \"{{inventoryId}}\",\n                \"reference\": \"{{reference}}\",\n                \"complement\": {\n                    \"complements\": [\n                        \"{{complements}}\"\n                    ]\n                }\n            }\n        },\n        \"products\": {\n            \"product\": [\n                \"{{product}}\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"control\": {\n    \"type\": \"T\",\n    \"code\": \"503\",\n    \"message\": \"Service Unavailable\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a7dee040-03e2-45ca-a877-4863a8df25e4",
+              "name": "Gateway Timeout",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "productOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-request-id",
+                    "value": "{{x-request-id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-service-host",
+                    "value": "{{x-service-host}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"order\": {\n        \"correlationOrder\": \"{{correlationOrder}}\",\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"associatedDocumentDate\": \"{{associatedDocumentDate}}\",\n        \"type\": \"{{type}}\",\n        \"infraType\": \"{{infraType}}\",\n        \"customer\": {\n            \"name\": \"{{name}}\",\n            \"subscriberId\": \"{{subscriberId}}\",\n            \"businessUnity\": \"{{businessUnity}}\",\n            \"fantasyName\": \"{{fantasyName}}\",\n            \"phoneNumber\": {\n                \"phoneNumbers\": [\n                    \"{{phoneNumbers}}\"\n                ]\n            },\n            \"workContact\": {\n                \"name\": \"{{workContact.name}}\",\n                \"email\": \"{{email}}\",\n                \"phone\": \"{{phone}}\"\n            }\n        },\n        \"appointment\": {\n            \"hasSlot\": \"{{hasSlot}}\",\n            \"date\": \"{{date}}\",\n            \"mandatoryType\": \"{{mandatoryType}}\",\n            \"workOrderId\": \"{{workOrderId}}\"\n        },\n        \"addresses\": {\n            \"address\": {\n                \"id\": \"{{id}}\",\n                \"inventoryId\": \"{{inventoryId}}\",\n                \"reference\": \"{{reference}}\",\n                \"complement\": {\n                    \"complements\": [\n                        \"{{complements}}\"\n                    ]\n                }\n            }\n        },\n        \"products\": {\n            \"product\": [\n                \"{{product}}\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Gateway Timeout",
+              "code": 504,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"control\": {\n    \"type\": \"T\",\n    \"code\": \"504\",\n    \"message\": \"Gateway Timeout\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test orderapi-vtal-postman using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /productOrder for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 201){\n    pm.test(\"Created\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Created\");\n        pm.test('Response has the `control` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`control`)){\n                if(pm.expect(ld.get(pm.response.json(), `control`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `control`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `control.type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`control.type`)){\n                if(pm.expect(ld.get(pm.response.json(), `control.type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `control.type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('control.type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"control.type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('control.type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"control.type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `control.message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`control.message`)){\n                if(pm.expect(ld.get(pm.response.json(), `control.message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `control.message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('control.message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"control.message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `control.code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`control.code`)){\n                if(pm.expect(ld.get(pm.response.json(), `control.code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `control.code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('control.code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"control.code\", \"\").length).to.be.at.most(3);\n        })\n\n        pm.test('Response has the `order` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`order`)){\n                if(pm.expect(ld.get(pm.response.json(), `order`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `order`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `order.id` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`order.id`)){\n                if(pm.expect(ld.get(pm.response.json(), `order.id`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `order.id`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('order.id length to be atmost `25`',function(){\n            pm.expect(ld.get(responseData, \"order.id\", \"\").length).to.be.at.most(25);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 400){\n    pm.test(\"BadRequest\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Unauthorized\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 403){\n    pm.test(\"Forbidden - Scope Not Permitted\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Forbidden\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Not Found\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Not Found\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 406){\n    pm.test(\"Not Found\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Not Acceptable\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 429){\n    pm.test(\"Too Many Requests - Exceeded Quota\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Too Many Requests\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"Internal Server Error\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 503){\n    pm.test(\"Service Unavailable\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Service Unavailable\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 504){\n    pm.test(\"Gateway Timeout\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Gateway Timeout\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        null
+      ],
+      "event": []
+    },
+    {
+      "id": "02daa9af-0dfe-4ce9-aecf-50bdd4e1d21c",
+      "name": "Cancel Product Order By Id",
+      "request": {
+        "name": "Cancel Product Order By Id",
+        "description": {},
+        "url": {
+          "path": [
+            "cancelProductOrder",
+            ":order.Id"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "{{order.Id}}",
+              "key": "order.Id",
+              "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "570f41fe-a57a-48e1-852d-84f87fa77f12",
+          "name": "Success",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "cancelProductOrder",
+                ":order.Id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{order.Id}}",
+                  "key": "order.Id",
+                  "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-Username",
+                "value": "{{X-Username}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"S\",\n    \"code\": \"200\",\n    \"message\": \"OK\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "6d628a68-40d9-4234-9c4d-676588479bb5",
+          "name": "Bad Request",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "cancelProductOrder",
+                ":order.Id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{order.Id}}",
+                  "key": "order.Id",
+                  "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-Username",
+                "value": "{{X-Username}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"400\",\n    \"message\": \"Bad Request\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "cb72905b-9515-4eda-ae95-7083930397fc",
+          "name": "Unauthorized",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "cancelProductOrder",
+                ":order.Id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{order.Id}}",
+                  "key": "order.Id",
+                  "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-Username",
+                "value": "{{X-Username}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"401\",\n    \"message\": \"Unauthorized\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "2d90b673-b89a-4a0a-870b-23cdfb78f0c5",
+          "name": "Forbidden - Scope Not Permitted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "cancelProductOrder",
+                ":order.Id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{order.Id}}",
+                  "key": "order.Id",
+                  "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-Username",
+                "value": "{{X-Username}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"403\",\n    \"message\": \"Forbidden - Scope Not Permitted\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "e5f2d749-7d51-49b1-ba13-ec95ca06d155",
+          "name": "Not Found",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "cancelProductOrder",
+                ":order.Id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{order.Id}}",
+                  "key": "order.Id",
+                  "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-Username",
+                "value": "{{X-Username}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"404\",\n    \"message\": \"Not Found\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "26e1cf8d-89fa-4173-9553-8a5d307572b3",
+          "name": "Not Found",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "cancelProductOrder",
+                ":order.Id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{order.Id}}",
+                  "key": "order.Id",
+                  "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-Username",
+                "value": "{{X-Username}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Acceptable",
+          "code": 406,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"406\",\n    \"message\": \"Not Acceptable (AssociatedDocument já existente/utilizado)\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "836f8e3d-94e0-4d11-acd4-b78e35488c6b",
+          "name": "Locked",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "cancelProductOrder",
+                ":order.Id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{order.Id}}",
+                  "key": "order.Id",
+                  "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-Username",
+                "value": "{{X-Username}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Locked (WebDAV) (RFC 4918)",
+          "code": 423,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"423\",\n    \"message\": \"Agendamento não pode ser alterado\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "7e5358c5-c452-45f1-80d1-ec71d17dae15",
+          "name": "Too Many Requests - Exceeded Quota",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "cancelProductOrder",
+                ":order.Id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{order.Id}}",
+                  "key": "order.Id",
+                  "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-Username",
+                "value": "{{X-Username}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Too Many Requests",
+          "code": 429,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": \"429\",\n    \"message\": \"Too Many Requests - Exceeded Quota\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "cc69b9fb-7f3d-43c0-95b6-6ada22883e8f",
+          "name": "Internal Server Error",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "cancelProductOrder",
+                ":order.Id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{order.Id}}",
+                  "key": "order.Id",
+                  "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-Username",
+                "value": "{{X-Username}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"T\",\n    \"code\": \"500\",\n    \"message\": \"Internal Server Error\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "2d1245a3-6bc6-4092-b763-a59be650a2a4",
+          "name": "Service Unavailable",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "cancelProductOrder",
+                ":order.Id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{order.Id}}",
+                  "key": "order.Id",
+                  "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-Username",
+                "value": "{{X-Username}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Service Unavailable",
+          "code": 503,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"T\",\n    \"code\": \"503\",\n    \"message\": \"Service Unavailable\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "87593e72-5c65-482c-a038-9d28f34003c0",
+          "name": "Gateway Timeout",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "cancelProductOrder",
+                ":order.Id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{order.Id}}",
+                  "key": "order.Id",
+                  "description": "(Required) identificador unico da ordem do serviço a ser cancelada"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "X-Username",
+                "value": "{{X-Username}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"order\": {\n        \"associatedDocument\": \"{{associatedDocument}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Gateway Timeout",
+          "code": 504,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"T\",\n    \"code\": \"504\",\n    \"message\": \"Gateway Timeout\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test orderapi-vtal-postman using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /cancelProductOrder/:order.Id for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Success\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 400){\n    pm.test(\"Bad Request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Unauthorized\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 403){\n    pm.test(\"Forbidden - Scope Not Permitted\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Forbidden\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Not Found\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Not Found\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 406){\n    pm.test(\"Not Found\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Not Acceptable\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 423){\n    pm.test(\"Locked\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Locked (WebDAV) (RFC 4918)\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 429){\n    pm.test(\"Too Many Requests - Exceeded Quota\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Too Many Requests\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"Internal Server Error\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 503){\n    pm.test(\"Service Unavailable\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Service Unavailable\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 504){\n    pm.test(\"Gateway Timeout\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Gateway Timeout\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n  \n        pm.test('type length to be atmost `1`',function(){\n            pm.expect(ld.get(responseData, \"type\", \"\").length).to.be.at.most(1);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('message length to be atmost `250`',function(){\n            pm.expect(ld.get(responseData, \"message\", \"\").length).to.be.at.most(250);\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('code length to be atmost `3`',function(){\n            pm.expect(ld.get(responseData, \"code\", \"\").length).to.be.at.most(3);\n        })\n\n    });\n\n}\n"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "60105144-599d-4192-a62b-060133c5f419",
+      "name": "listener",
+      "item": [
+        {
+          "id": "b5fda93f-7d63-4f7b-8cb8-8389a95a8ee7",
+          "name": "State Change Event By Client",
+          "request": {
+            "name": "State Change Event By Client",
+            "description": {},
+            "url": {
+              "path": [
+                "listener",
+                "productOrderStateChangeEvent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"issue\": {\n                \"issue\": {\n                    \"code\": {\n                        \"code\": \"{{code.code}}\"\n                    },\n                    \"description\": {\n                        \"description\": \"{{description.description}}\"\n                    },\n                    \"type\": \"{{type}}\",\n                    \"observation\": \"{{observation}}\",\n                    \"updateDate\": \"{{updateDate}}\",\n                    \"action\": \"{{action}}\",\n                    \"task\": \"{{task}}\",\n                    \"fieldActivity\": \"{{fieldActivity}}\",\n                    \"reason\": \"{{reason}}\"\n                }\n            },\n            \"type\": \"{{order.type}}\",\n            \"code\": \"{{order.code}}\",\n            \"description\": \"{{order.description}}\",\n            \"lostEquipment\": \"{{lostEquipment}}\",\n            \"resource\": {\n                \"resource\": {\n                    \"gponAccess\": \"{{gponAccess}}\",\n                    \"devices\": {\n                        \"device\": [\n                            \"{{device}}\"\n                        ]\n                    },\n                    \"fiberPath\": {\n                        \"items\": {\n                            \"item\": [\n                                \"{{item}}\"\n                            ]\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "100df130-c3ec-4743-aa1e-01bdbdfe3f19",
+              "name": "Operação realizada com sucesso",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderStateChangeEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"type\": \"{{type}}\",\n            \"code\": \"{{code}}\",\n            \"description\": \"{{description}}\",\n            \"lostEquipment\": \"{{lostEquipment}}\",\n            \"resource\": {\n                \"gponAccess\": \"{{gponAccess}}\",\n                \"fiberPath\": {\n                    \"items\": {\n                        \"item\": [\n                            \"{{item}}\"\n                        ]\n                    }\n                }\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d783a0fa-4ff7-4d77-8a66-0f4be0969486",
+              "name": "BadRequest",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderStateChangeEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"type\": \"{{type}}\",\n            \"code\": \"{{code}}\",\n            \"description\": \"{{description}}\",\n            \"lostEquipment\": \"{{lostEquipment}}\",\n            \"resource\": {\n                \"gponAccess\": \"{{gponAccess}}\",\n                \"fiberPath\": {\n                    \"items\": {\n                        \"item\": [\n                            \"{{item}}\"\n                        ]\n                    }\n                }\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c58d83fd-fb28-4d5c-8be2-b306e3261842",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderStateChangeEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"type\": \"{{type}}\",\n            \"code\": \"{{code}}\",\n            \"description\": \"{{description}}\",\n            \"lostEquipment\": \"{{lostEquipment}}\",\n            \"resource\": {\n                \"gponAccess\": \"{{gponAccess}}\",\n                \"fiberPath\": {\n                    \"items\": {\n                        \"item\": [\n                            \"{{item}}\"\n                        ]\n                    }\n                }\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "748210ac-df4e-48c6-acfb-4fd47988ce43",
+              "name": "ServerError",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderStateChangeEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"type\": \"{{type}}\",\n            \"code\": \"{{code}}\",\n            \"description\": \"{{description}}\",\n            \"lostEquipment\": \"{{lostEquipment}}\",\n            \"resource\": {\n                \"gponAccess\": \"{{gponAccess}}\",\n                \"fiberPath\": {\n                    \"items\": {\n                        \"item\": [\n                            \"{{item}}\"\n                        ]\n                    }\n                }\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8c2afdfa-f78f-44b8-afe2-d71df893ab3c",
+              "name": "Unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderStateChangeEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"type\": \"{{type}}\",\n            \"code\": \"{{code}}\",\n            \"description\": \"{{description}}\",\n            \"lostEquipment\": \"{{lostEquipment}}\",\n            \"resource\": {\n                \"gponAccess\": \"{{gponAccess}}\",\n                \"fiberPath\": {\n                    \"items\": {\n                        \"item\": [\n                            \"{{item}}\"\n                        ]\n                    }\n                }\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "afffcb7c-0412-4969-8404-3db429e82849",
+              "name": "Timeout",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderStateChangeEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"type\": \"{{type}}\",\n            \"code\": \"{{code}}\",\n            \"description\": \"{{description}}\",\n            \"lostEquipment\": \"{{lostEquipment}}\",\n            \"resource\": {\n                \"gponAccess\": \"{{gponAccess}}\",\n                \"fiberPath\": {\n                    \"items\": {\n                        \"item\": [\n                            \"{{item}}\"\n                        ]\n                    }\n                }\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Gateway Timeout",
+              "code": 504,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test orderapi-vtal-postman using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /listener/productOrderStateChangeEvent for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 204){\n    pm.test(\"Operação realizada com sucesso\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"No Content\");\n    });\n\n}\n\nif (pm.response.code == 400){\n    pm.test(\"BadRequest\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Unauthorized\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"ServerError\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n    });\n\n}\n\nif (pm.response.code == 503){\n    pm.test(\"Unavailable\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Service Unavailable\");\n    });\n\n}\n\nif (pm.response.code == 504){\n    pm.test(\"Timeout\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Gateway Timeout\");\n    });\n\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1090e6c3-9317-4319-8882-0d7038418318",
+          "name": "Product Order Create Event By Client",
+          "request": {
+            "name": "Product Order Create Event By Client",
+            "description": {},
+            "url": {
+              "path": [
+                "listener",
+                "productOrderCreateEvent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"issue\": {\n                \"issue\": {\n                    \"code\": {\n                        \"code\": \"{{code.code}}\"\n                    },\n                    \"description\": {\n                        \"description\": \"{{description.description}}\"\n                    },\n                    \"type\": \"{{type}}\",\n                    \"observation\": \"{{observation}}\",\n                    \"updateDate\": \"{{updateDate}}\",\n                    \"action\": \"{{action}}\",\n                    \"task\": \"{{task}}\",\n                    \"fieldActivity\": \"{{fieldActivity}}\",\n                    \"reason\": \"{{reason}}\"\n                }\n            },\n            \"type\": \"{{order.type}}\",\n            \"code\": \"{{order.code}}\",\n            \"description\": \"{{order.description}}\",\n            \"lostEquipment\": \"{{lostEquipment}}\",\n            \"resource\": {\n                \"resource\": {\n                    \"gponAccess\": \"{{gponAccess}}\",\n                    \"devices\": {\n                        \"device\": [\n                            \"{{device}}\"\n                        ]\n                    },\n                    \"fiberPath\": {\n                        \"items\": {\n                            \"item\": [\n                                \"{{item}}\"\n                            ]\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5ab3d325-c52c-4bac-a3cc-8d8d6a1ca573",
+              "name": "Operação realizada com sucesso",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5a10b159-935c-4919-a337-36a6533a40c3",
+              "name": "BadRequest",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7014ee30-0a8e-40e2-93f9-7c0b0a75bc7d",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "46bffbf0-4b7a-4efe-be4d-f8025b880362",
+              "name": "ServerError",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e9256fa3-00fc-4171-b670-700ded952adb",
+              "name": "Unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8aa683d9-fdfc-41dc-bd31-119e7d371885",
+              "name": "Timeout",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Gateway Timeout",
+              "code": 504,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test orderapi-vtal-postman using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /listener/productOrderCreateEvent for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 204){\n    pm.test(\"Operação realizada com sucesso\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"No Content\");\n    });\n\n}\n\nif (pm.response.code == 400){\n    pm.test(\"BadRequest\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Unauthorized\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"ServerError\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n    });\n\n}\n\nif (pm.response.code == 503){\n    pm.test(\"Unavailable\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Service Unavailable\");\n    });\n\n}\n\nif (pm.response.code == 504){\n    pm.test(\"Timeout\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Gateway Timeout\");\n    });\n\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0b52d5c6-8219-4e78-9b67-83aaf8bce7a4",
+          "name": "Product Order Information Required Event",
+          "request": {
+            "name": "Product Order Information Required Event",
+            "description": {},
+            "url": {
+              "path": [
+                "listener",
+                "productOrderInformationRequiredEvent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"issue\": {\n                \"issue\": {\n                    \"code\": {\n                        \"code\": \"{{code.code}}\"\n                    },\n                    \"description\": {\n                        \"description\": \"{{description.description}}\"\n                    },\n                    \"type\": \"{{type}}\",\n                    \"observation\": \"{{observation}}\",\n                    \"updateDate\": \"{{updateDate}}\",\n                    \"action\": \"{{action}}\",\n                    \"task\": \"{{task}}\",\n                    \"fieldActivity\": \"{{fieldActivity}}\",\n                    \"reason\": \"{{reason}}\"\n                }\n            },\n            \"type\": \"{{order.type}}\",\n            \"code\": \"{{order.code}}\",\n            \"description\": \"{{order.description}}\",\n            \"lostEquipment\": \"{{lostEquipment}}\",\n            \"resource\": {\n                \"resource\": {\n                    \"gponAccess\": \"{{gponAccess}}\",\n                    \"devices\": {\n                        \"device\": [\n                            \"{{device}}\"\n                        ]\n                    },\n                    \"fiberPath\": {\n                        \"items\": {\n                            \"item\": [\n                                \"{{item}}\"\n                            ]\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7d191e87-361c-42c3-86e2-d8e172c80445",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderInformationRequiredEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"issue\": {\n                \"code\": \"{{code}}\",\n                \"description\": \"{{description}}\",\n                \"type\": \"{{type}}\",\n                \"observation\": \"{{observation}}\",\n                \"updateDate\": \"{{updateDate}}\",\n                \"action\": \"{{action}}\",\n                \"task\": \"{{task}}\",\n                \"fieldActivity\": \"{{fieldActivity}}\",\n                \"reason\": \"{{reason}}\"\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "08733571-a066-4f66-be8f-2ae7a07485ed",
+              "name": "BadRequest",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderInformationRequiredEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"issue\": {\n                \"code\": \"{{code}}\",\n                \"description\": \"{{description}}\",\n                \"type\": \"{{type}}\",\n                \"observation\": \"{{observation}}\",\n                \"updateDate\": \"{{updateDate}}\",\n                \"action\": \"{{action}}\",\n                \"task\": \"{{task}}\",\n                \"fieldActivity\": \"{{fieldActivity}}\",\n                \"reason\": \"{{reason}}\"\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3313c617-3364-46f1-bad9-411919fbe1d8",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderInformationRequiredEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"issue\": {\n                \"code\": \"{{code}}\",\n                \"description\": \"{{description}}\",\n                \"type\": \"{{type}}\",\n                \"observation\": \"{{observation}}\",\n                \"updateDate\": \"{{updateDate}}\",\n                \"action\": \"{{action}}\",\n                \"task\": \"{{task}}\",\n                \"fieldActivity\": \"{{fieldActivity}}\",\n                \"reason\": \"{{reason}}\"\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "dee4e552-ac9e-4ad9-92b9-c7e7fbf44204",
+              "name": "ServerError",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderInformationRequiredEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"issue\": {\n                \"code\": \"{{code}}\",\n                \"description\": \"{{description}}\",\n                \"type\": \"{{type}}\",\n                \"observation\": \"{{observation}}\",\n                \"updateDate\": \"{{updateDate}}\",\n                \"action\": \"{{action}}\",\n                \"task\": \"{{task}}\",\n                \"fieldActivity\": \"{{fieldActivity}}\",\n                \"reason\": \"{{reason}}\"\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "44822743-de7b-4573-8779-a7ec3cd8821f",
+              "name": "Unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderInformationRequiredEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"issue\": {\n                \"code\": \"{{code}}\",\n                \"description\": \"{{description}}\",\n                \"type\": \"{{type}}\",\n                \"observation\": \"{{observation}}\",\n                \"updateDate\": \"{{updateDate}}\",\n                \"action\": \"{{action}}\",\n                \"task\": \"{{task}}\",\n                \"fieldActivity\": \"{{fieldActivity}}\",\n                \"reason\": \"{{reason}}\"\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b1863532-c211-4546-a601-f33b68f54056",
+              "name": "Timeout",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "productOrderInformationRequiredEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"issue\": {\n                \"code\": \"{{code}}\",\n                \"description\": \"{{description}}\",\n                \"type\": \"{{type}}\",\n                \"observation\": \"{{observation}}\",\n                \"updateDate\": \"{{updateDate}}\",\n                \"action\": \"{{action}}\",\n                \"task\": \"{{task}}\",\n                \"fieldActivity\": \"{{fieldActivity}}\",\n                \"reason\": \"{{reason}}\"\n            }\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Gateway Timeout",
+              "code": 504,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test orderapi-vtal-postman using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /listener/productOrderInformationRequiredEvent for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 204){\n    pm.test(\"Success\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"No Content\");\n    });\n\n}\n\nif (pm.response.code == 400){\n    pm.test(\"BadRequest\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Unauthorized\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"ServerError\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n    });\n\n}\n\nif (pm.response.code == 503){\n    pm.test(\"Unavailable\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Service Unavailable\");\n    });\n\n}\n\nif (pm.response.code == 504){\n    pm.test(\"Timeout\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Gateway Timeout\");\n    });\n\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cb08c91c-6112-4002-9957-cfe462fb2100",
+          "name": "Cancel Product Order Create Event By Client",
+          "request": {
+            "name": "Cancel Product Order Create Event By Client",
+            "description": {},
+            "url": {
+              "path": [
+                "listener",
+                "cancelProductOrderCreateEvent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"notification\": {\n        \"date\": \"{{date}}\",\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"order\": {\n            \"id\": \"{{id}}\",\n            \"correlationOrder\": \"{{correlationOrder}}\",\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"issue\": {\n                \"issue\": {\n                    \"code\": {\n                        \"code\": \"{{code.code}}\"\n                    },\n                    \"description\": {\n                        \"description\": \"{{description.description}}\"\n                    },\n                    \"type\": \"{{type}}\",\n                    \"observation\": \"{{observation}}\",\n                    \"updateDate\": \"{{updateDate}}\",\n                    \"action\": \"{{action}}\",\n                    \"task\": \"{{task}}\",\n                    \"fieldActivity\": \"{{fieldActivity}}\",\n                    \"reason\": \"{{reason}}\"\n                }\n            },\n            \"type\": \"{{order.type}}\",\n            \"code\": \"{{order.code}}\",\n            \"description\": \"{{order.description}}\",\n            \"lostEquipment\": \"{{lostEquipment}}\",\n            \"resource\": {\n                \"resource\": {\n                    \"gponAccess\": \"{{gponAccess}}\",\n                    \"devices\": {\n                        \"device\": [\n                            \"{{device}}\"\n                        ]\n                    },\n                    \"fiberPath\": {\n                        \"items\": {\n                            \"item\": [\n                                \"{{item}}\"\n                            ]\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ab8f6b61-fc90-4448-9981-32d0cb9f38a5",
+              "name": "Operação realizada com sucesso",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "cancelProductOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"id\": \"{{id}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f28499e9-7726-46e5-be7e-9d1a8aa83048",
+              "name": "BadRequest",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "cancelProductOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"id\": \"{{id}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "69ac3d44-bc47-4f2c-9b99-2cd79e100920",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "cancelProductOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"id\": \"{{id}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4a0a911c-efb0-4a6c-a42f-9686b6449001",
+              "name": "ServerError",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "cancelProductOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"id\": \"{{id}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "110b39ec-16a5-4961-a2a8-2bdb3f9ba507",
+              "name": "Unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "cancelProductOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"id\": \"{{id}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "37fc3e49-8497-4ea7-82d5-944cfb25a133",
+              "name": "Timeout",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listener",
+                    "cancelProductOrderCreateEvent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Username",
+                    "value": "{{X-Username}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"notification\": {\n        \"order\": {\n            \"associatedDocument\": \"{{associatedDocument}}\",\n            \"id\": \"{{id}}\"\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Gateway Timeout",
+              "code": 504,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test orderapi-vtal-postman using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /listener/cancelProductOrderCreateEvent for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 204){\n    pm.test(\"Operação realizada com sucesso\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"No Content\");\n    });\n\n}\n\nif (pm.response.code == 400){\n    pm.test(\"BadRequest\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Unauthorized\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"ServerError\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n    });\n\n}\n\nif (pm.response.code == 503){\n    pm.test(\"Unavailable\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Service Unavailable\");\n    });\n\n}\n\nif (pm.response.code == 504){\n    pm.test(\"Timeout\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Gateway Timeout\");\n    });\n\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    },
+    {
+      "type": "integer",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Username"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e3447a8c-d917-481b-b05f-02eabcff384c",
+    "name": "ProductOrdering",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}
