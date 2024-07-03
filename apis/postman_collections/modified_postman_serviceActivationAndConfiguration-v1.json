@@ -1,0 +1,748 @@
+{
+  "item": [
+    {
+      "id": "6f3aa519-457c-47f7-a74d-12bf6d4485fc",
+      "name": "Activation and Configuration Service Opening",
+      "request": {
+        "name": "Activation and Configuration Service Opening",
+        "description": {},
+        "url": {
+          "path": [
+            "configuration"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"configuration\": {\n        \"action\": {\n            \"type\": \"{{type}}\",\n            \"parameters\": {\n                \"parameters\": {\n                    \"frequencyBand\": \"{{frequencyBand}}\",\n                    \"wifiWPAKey\": \"{{wifiWPAKey}}\",\n                    \"wifiIndex\": \"{{wifiIndex}}\",\n                    \"SSID\": \"{{SSID}}\",\n                    \"passwd\": \"{{passwd}}\",\n                    \"broadcastSSID\": \"{{broadcastSSID}}\",\n                    \"wifiChannel\": \"{{wifiChannel}}\",\n                    \"mode\": \"{{mode}}\"\n                }\n            }\n        },\n        \"customer\": {\n            \"customer\": {\n                \"subscriberId\": \"{{subscriberId}}\"\n            }\n        },\n        \"id\": \"{{id}}\",\n        \"adminStatus\": \"{{adminStatus}}\",\n        \"startDate\": \"{{startDate}}\",\n        \"endDate\": \"{{endDate}}\",\n        \"state\": \"{{state}}\",\n        \"diagnostic\": {\n            \"diagnostic\": {\n                \"code\": \"{{code}}\",\n                \"messages\": {\n                    \"message\": [\n                        \"{{message}}\"\n                    ]\n                }\n            }\n        }\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "13443dab-54fe-4fc0-90ba-d7fa41d3df16",
+          "name": "Success",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"configuration\": {\n        \"action\": {\n            \"type\": \"{{type}}\",\n            \"parameters\": {\n                \"frequencyBand\": \"{{frequencyBand}}\"\n            }\n        },\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"S\",\n    \"code\": 200,\n    \"message\": \"OK\"\n  },\n  \"configuration\": {\n    \"id\": \"78c3ad32-6546-427b-9770-5da5f917277f\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "7c7f3319-3f87-4cc2-8214-97da67413997",
+          "name": "Bad Request",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"configuration\": {\n        \"action\": {\n            \"type\": \"{{type}}\",\n            \"parameters\": {\n                \"frequencyBand\": \"{{frequencyBand}}\"\n            }\n        },\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": 400,\n    \"message\": \"Bad Request\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "840f2506-88bc-45b7-9f25-2aea318441fc",
+          "name": "Unauthorized",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"configuration\": {\n        \"action\": {\n            \"type\": \"{{type}}\",\n            \"parameters\": {\n                \"frequencyBand\": \"{{frequencyBand}}\"\n            }\n        },\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": 401,\n    \"message\": \"Unauthorized\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "e8fd8cf5-9c6c-451f-a815-6360b1d32237",
+          "name": "Forbidden - Scope Not Permitted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"configuration\": {\n        \"action\": {\n            \"type\": \"{{type}}\",\n            \"parameters\": {\n                \"frequencyBand\": \"{{frequencyBand}}\"\n            }\n        },\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": 403,\n    \"message\": \"Forbidden - Scope Not Permitted\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "3e2e9853-f565-4a56-b1a6-8e9b5bd01afc",
+          "name": "Not Found",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"configuration\": {\n        \"action\": {\n            \"type\": \"{{type}}\",\n            \"parameters\": {\n                \"frequencyBand\": \"{{frequencyBand}}\"\n            }\n        },\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": 404,\n    \"message\": \"Not Found\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "a56a1818-ee17-4f4d-bde3-62caea10d574",
+          "name": "Too Many Requests - Exceeded Quota",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"configuration\": {\n        \"action\": {\n            \"type\": \"{{type}}\",\n            \"parameters\": {\n                \"frequencyBand\": \"{{frequencyBand}}\"\n            }\n        },\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Too Many Requests",
+          "code": 429,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"E\",\n    \"code\": 429,\n    \"message\": \"Too Many Requests - Exceeded Quota\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "2107b772-ffb6-49e3-b20d-4204bba3bb15",
+          "name": "Internal Server Error",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"configuration\": {\n        \"action\": {\n            \"type\": \"{{type}}\",\n            \"parameters\": {\n                \"frequencyBand\": \"{{frequencyBand}}\"\n            }\n        },\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"T\",\n    \"code\": 500,\n    \"message\": \"Internal Server Error\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "4981c8dd-c591-4a62-a745-2c0ad4293f32",
+          "name": "Service Unavailable",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"configuration\": {\n        \"action\": {\n            \"type\": \"{{type}}\",\n            \"parameters\": {\n                \"frequencyBand\": \"{{frequencyBand}}\"\n            }\n        },\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Service Unavailable",
+          "code": 503,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"T\",\n    \"code\": 503,\n    \"message\": \"Service Unavailable\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "c9eafa26-a8e8-4851-ba94-83be4c2fd1a2",
+          "name": "Gateway Timeout",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"configuration\": {\n        \"action\": {\n            \"type\": \"{{type}}\",\n            \"parameters\": {\n                \"frequencyBand\": \"{{frequencyBand}}\"\n            }\n        },\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Gateway Timeout",
+          "code": 504,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"control\": {\n    \"type\": \"T\",\n    \"code\": 504,\n    \"message\": \"Gateway Timeout\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vtal-api-testing using AI Type Open AI and AI Model gpt-4\n\n\nTest generated for /configuration for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Success\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n        pm.test('Response has the `control` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`control`)){\n                if(pm.expect(ld.get(pm.response.json(), `control`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `control`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `control.type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`control.type`)){\n                if(pm.expect(ld.get(pm.response.json(), `control.type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `control.type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('control.type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"control.type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n\n        pm.test('Response has the `control.message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`control.message`)){\n                if(pm.expect(ld.get(pm.response.json(), `control.message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `control.message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `control.code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`control.code`)){\n                if(pm.expect(ld.get(pm.response.json(), `control.code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `control.code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `configuration.configuration` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`configuration.configuration`)){\n                if(pm.expect(ld.get(pm.response.json(), `configuration.configuration`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `configuration.configuration`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `configuration.configuration.action` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`configuration.configuration.action`)){\n                if(pm.expect(ld.get(pm.response.json(), `configuration.configuration.action`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `configuration.configuration.action`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `configuration.configuration.id` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`configuration.configuration.id`)){\n                if(pm.expect(ld.get(pm.response.json(), `configuration.configuration.id`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `configuration.configuration.id`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('configuration.configuration.id length to be atmost `255`',function(){\n            pm.expect(ld.get(responseData, \"configuration.configuration.id\", \"\").length).to.be.at.most(255);\n        })\n\n        pm.test('Response has the `configuration.configuration.adminStatus` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`configuration.configuration.adminStatus`)){\n                if(pm.expect(ld.get(pm.response.json(), `configuration.configuration.adminStatus`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `configuration.configuration.adminStatus`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('configuration.configuration.adminStatus to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"configuration.configuration.adminStatus\", \"\")).to.include.oneOf([\"0\",\"1\"]);\n        })\n  \n        pm.test('configuration.configuration.adminStatus length to be atmost `20`',function(){\n            pm.expect(ld.get(responseData, \"configuration.configuration.adminStatus\", \"\").length).to.be.at.most(20);\n        })\n\n        pm.test('Response has the `configuration.configuration.startDate` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`configuration.configuration.startDate`)){\n                if(pm.expect(ld.get(pm.response.json(), `configuration.configuration.startDate`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `configuration.configuration.startDate`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('configuration.configuration.startDate length to be atmost `25`',function(){\n            pm.expect(ld.get(responseData, \"configuration.configuration.startDate\", \"\").length).to.be.at.most(25);\n        })\n  \n        pm.test('configuration.configuration.startDate format to be date-time',function(){\n            pm.expect(ld.get(responseData, \"configuration.configuration.startDate\", \"\")).to.match(/^d{4}-d{2}-d{2}T([01]d|2[0-3]):([0-5]d):([0-5]d)$/);\n        })\n\n        pm.test('Response has the `configuration.configuration.endDate` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`configuration.configuration.endDate`)){\n                if(pm.expect(ld.get(pm.response.json(), `configuration.configuration.endDate`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `configuration.configuration.endDate`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('configuration.configuration.endDate length to be atmost `25`',function(){\n            pm.expect(ld.get(responseData, \"configuration.configuration.endDate\", \"\").length).to.be.at.most(25);\n        })\n  \n        pm.test('configuration.configuration.endDate format to be date-time',function(){\n            pm.expect(ld.get(responseData, \"configuration.configuration.endDate\", \"\")).to.match(/^d{4}-d{2}-d{2}T([01]d|2[0-3]):([0-5]d):([0-5]d)$/);\n        })\n\n        pm.test('Response has the `configuration.configuration.state` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`configuration.configuration.state`)){\n                if(pm.expect(ld.get(pm.response.json(), `configuration.configuration.state`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `configuration.configuration.state`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n  \n        pm.test('configuration.configuration.state length to be atmost `255`',function(){\n            pm.expect(ld.get(responseData, \"configuration.configuration.state\", \"\").length).to.be.at.most(255);\n        })\n\n    });\n\n}\n\nif (pm.response.code == 400){\n    pm.test(\"Bad Request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Unauthorized\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 403){\n    pm.test(\"Forbidden - Scope Not Permitted\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Forbidden\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Not Found\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Not Found\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 429){\n    pm.test(\"Too Many Requests - Exceeded Quota\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Too Many Requests\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"Internal Server Error\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 503){\n    pm.test(\"Service Unavailable\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Service Unavailable\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 504){\n    pm.test(\"Gateway Timeout\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Gateway Timeout\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n \n        pm.test('type to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"type\", \"\")).to.include.oneOf([\"S\",\"T\",\"E\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "09fe753b-7bb3-444a-aeed-3459f7f8d181",
+      "name": "Configuration Result Event",
+      "request": {
+        "name": "Configuration Result Event",
+        "description": {},
+        "url": {
+          "path": [
+            "listener",
+            "configurationResultEvent"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"notification\": {\n        \"notification\": {\n            \"customer\": {\n                \"customer\": {\n                    \"subscriberId\": \"{{subscriberId}}\"\n                }\n            },\n            \"date\": \"{{date}}\",\n            \"configuration\": {\n                \"configuration\": {\n                    \"action\": {\n                        \"type\": \"{{type}}\",\n                        \"parameters\": {\n                            \"parameters\": {\n                                \"value\": \"{{value}}\"\n                            }\n                        }\n                    },\n                    \"customer\": {\n                        \"customer\": {\n                            \"subscriberId\": {\n                                \"value\": \"{{configuration.configuration.customer.customer.subscriberId.value}}\"\n                            }\n                        }\n                    },\n                    \"id\": \"{{id}}\",\n                    \"adminStatus\": \"{{adminStatus}}\",\n                    \"startDate\": \"{{startDate}}\",\n                    \"endDate\": \"{{endDate}}\",\n                    \"state\": \"{{state}}\",\n                    \"diagnostic\": {\n                        \"diagnostic\": {\n                            \"code\": {\n                                \"value\": \"{{code.value}}\"\n                            },\n                            \"messages\": {\n                                \"value\": \"{{messages.value}}\"\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "b9986b8b-6b2b-447e-9559-b9ecf04c5984",
+          "name": "Success",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "listener",
+                "configurationResultEvent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"notification\": {\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"date\": \"{{date}}\",\n        \"configuration\": {\n            \"id\": \"{{id}}\",\n            \"type\": \"{{type}}\",\n            \"startDate\": \"{{startDate}}\",\n            \"endDate\": \"{{endDate}}\",\n            \"state\": \"{{state}}\",\n            \"diagnostic\": {\n                \"code\": \"{{code}}\",\n                \"messages\": \"{{messages}}\"\n            }\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "07eaa2bf-9ff8-4996-bfb8-810f2640f702",
+          "name": "BadRequest",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "listener",
+                "configurationResultEvent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"notification\": {\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"date\": \"{{date}}\",\n        \"configuration\": {\n            \"id\": \"{{id}}\",\n            \"type\": \"{{type}}\",\n            \"startDate\": \"{{startDate}}\",\n            \"endDate\": \"{{endDate}}\",\n            \"state\": \"{{state}}\",\n            \"diagnostic\": {\n                \"code\": \"{{code}}\",\n                \"messages\": \"{{messages}}\"\n            }\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "47ead033-c46a-4ae0-b5e2-8e28400f8921",
+          "name": "Unauthorized",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "listener",
+                "configurationResultEvent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"notification\": {\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"date\": \"{{date}}\",\n        \"configuration\": {\n            \"id\": \"{{id}}\",\n            \"type\": \"{{type}}\",\n            \"startDate\": \"{{startDate}}\",\n            \"endDate\": \"{{endDate}}\",\n            \"state\": \"{{state}}\",\n            \"diagnostic\": {\n                \"code\": \"{{code}}\",\n                \"messages\": \"{{messages}}\"\n            }\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "89bed93f-e8b5-4408-a396-15dc43f08fa1",
+          "name": "ServerError",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "listener",
+                "configurationResultEvent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"notification\": {\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"date\": \"{{date}}\",\n        \"configuration\": {\n            \"id\": \"{{id}}\",\n            \"type\": \"{{type}}\",\n            \"startDate\": \"{{startDate}}\",\n            \"endDate\": \"{{endDate}}\",\n            \"state\": \"{{state}}\",\n            \"diagnostic\": {\n                \"code\": \"{{code}}\",\n                \"messages\": \"{{messages}}\"\n            }\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "97cbc821-7993-40f9-9c86-4cd93bc84fec",
+          "name": "Unavailable",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "listener",
+                "configurationResultEvent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"notification\": {\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"date\": \"{{date}}\",\n        \"configuration\": {\n            \"id\": \"{{id}}\",\n            \"type\": \"{{type}}\",\n            \"startDate\": \"{{startDate}}\",\n            \"endDate\": \"{{endDate}}\",\n            \"state\": \"{{state}}\",\n            \"diagnostic\": {\n                \"code\": \"{{code}}\",\n                \"messages\": \"{{messages}}\"\n            }\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Service Unavailable",
+          "code": 503,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "c5a533da-1fdc-41e3-83cd-6c209b8128b5",
+          "name": "Timeout",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "listener",
+                "configurationResultEvent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"notification\": {\n        \"customer\": {\n            \"subscriberId\": \"{{subscriberId}}\"\n        },\n        \"date\": \"{{date}}\",\n        \"configuration\": {\n            \"id\": \"{{id}}\",\n            \"type\": \"{{type}}\",\n            \"startDate\": \"{{startDate}}\",\n            \"endDate\": \"{{endDate}}\",\n            \"state\": \"{{state}}\",\n            \"diagnostic\": {\n                \"code\": \"{{code}}\",\n                \"messages\": \"{{messages}}\"\n            }\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Gateway Timeout",
+          "code": 504,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vtal-api-testing using AI Type Open AI and AI Model gpt-4\n\n\nTest generated for /listener/configurationResultEvent for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 204){\n    pm.test(\"Success\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"No Content\");\n    });\n\n}\n\nif (pm.response.code == 400){\n    pm.test(\"BadRequest\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Unauthorized\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"ServerError\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n    });\n\n}\n\nif (pm.response.code == 503){\n    pm.test(\"Unavailable\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Service Unavailable\");\n    });\n\n}\n\nif (pm.response.code == 504){\n    pm.test(\"Timeout\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Gateway Timeout\");\n    });\n\n}\n"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    },
+    {
+      "type": "integer",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ],
+  "info": {
+    "_postman_id": "6917def1-9a06-48b4-ba38-b59004c79397",
+    "name": "Service Activation And Configuration",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

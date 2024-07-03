@@ -1,0 +1,10 @@
+type,frequencyBand,wifiWPAKey,wifiIndex,SSID,passwd,broadcastSSID,wifiChannel,mode,subscriberId,id,adminStatus,startDate,endDate,state,code,message,statusCode,scenario
+"HGW_WIFI_ENABLE","2.4GHz","","","","","","","","SVTAL001","78c3ad32-6546-427b-9770-5da5f917277f","1","2022-04-01T00:00:00Z","2022-04-02T00:00:00Z","active",200,"OK",200,"Success"
+"HGW_WIFI_DISABLE","2.4GHz","","","","","","","","SVTAL001","1234abcd-5678-efgh-ijkl-91011mnopqrst","0","2022-04-03T00:00:00Z","2022-04-04T00:00:00Z","inactive",400,"Bad Request",400,"Bad Request"
+"HGW_WIFI_SET_PASSWD","","","1","","cris621358","","","WPAand11i","SVTAL001","abcd1234-efgh-5678-ijkl-91011mnopqrst","1","2022-04-05T00:00:00Z","2022-04-06T00:00:00Z","active",401,"Unauthorized",401,"Unauthorized"
+"HGW_WIFI_CONFIGURATION","","","1","RMG2Go","","1","1","WPAand11i","SVTAL001","1234abcd-5678-efgh-ijkl-91011mnopqrst","0","2022-04-07T00:00:00Z","2022-04-08T00:00:00Z","inactive",403,"Forbidden - Scope Not Permitted",403,"Forbidden - Scope Not Permitted"
+"GPON_ONT_RESET","","","","","","","","","SVTAL001","abcd1234-efgh-5678-ijkl-91011mnopqrst","1","2022-04-09T00:00:00Z","2022-04-10T00:00:00Z","active",404,"Not Found",404,"Not Found"
+"HGW_WIFI_ENABLE","2.4GHz","","","","","","","","SVTAL001","78c3ad32-6546-427b-9770-5da5f917277f","0","2022-04-11T00:00:00Z","2022-04-12T00:00:00Z","inactive",429,"Too Many Requests - Exceeded Quota",429,"Too Many Requests - Exceeded Quota"
+"HGW_WIFI_DISABLE","2.4GHz","","","","","","","","SVTAL001","1234abcd-5678-efgh-ijkl-91011mnopqrst","1","2022-04-13T00:00:00Z","2022-04-14T00:00:00Z","active",500,"Internal Server Error",500,"Internal Server Error"
+"HGW_WIFI_SET_PASSWD","","","1","","cris621358","","","WPAand11i","SVTAL001","abcd1234-efgh-5678-ijkl-91011mnopqrst","0","2022-04-15T00:00:00Z","2022-04-16T00:00:00Z","inactive",503,"Service Unavailable",503,"Service Unavailable"
+"HGW_WIFI_CONFIGURATION","","","1","RMG2Go","","1","1","WPAand11i","SVTAL001","1234abcd-5678-efgh-ijkl-91011mnopqrst","1","2022-04-17T00:00:00Z","2022-04-18T00:00:00Z","active",504,"Gateway Timeout",504,"Gateway Timeout"
