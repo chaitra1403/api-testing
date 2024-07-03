@@ -1,0 +1,7 @@
+subscriberId,date,type,value,configuration.configuration.customer.customer.subscriberId.value,id,adminStatus,startDate,endDate,state,code.value,messages.value,statusCode,scenario
+SVTAL001,2022-09-06T15:30:00Z,HGW_WIFI_ENABLE,Configure Service To Wifi Enable,SVTAL001,abc123,1,2022-09-06T15:30:00Z,2022-09-06T15:35:00Z,active,code1,message1,204,Success
+SVTAL001,2022-09-06T16:00:00Z,HGW_WIFI_DISABLE,Configure Service To Wifi Disable,SVTAL001,abc124,0,2022-09-06T16:00:00Z,2022-09-06T16:05:00Z,inactive,code2,message2,400,BadRequest
+SVTAL001,2022-09-06T16:30:00Z,HGW_WIFI_SET_PASSWD,Configure Service To Wifi Set Password,SVTAL001,abc125,1,2022-09-06T16:30:00Z,2022-09-06T16:35:00Z,active,code3,message3,401,Unauthorized
+SVTAL001,2022-09-06T17:00:00Z,HGW_WIFI_CONFIGURATION,Configure Service To Wifi Configuration,SVTAL001,abc126,0,2022-09-06T17:00:00Z,2022-09-06T17:05:00Z,inactive,code4,message4,500,ServerError
+SVTAL001,2022-09-06T17:30:00Z,GPON_ONT_RESET,Configure Service to GPON ONT RESET,SVTAL001,abc127,1,2022-09-06T17:30:00Z,2022-09-06T17:35:00Z,active,code5,message5,503,Unavailable
+SVTAL001,2022-09-06T18:00:00Z,HGW_WIFI_ENABLE,Configure Service To Wifi Enable,SVTAL001,abc128,0,2022-09-06T18:00:00Z,2022-09-06T18:05:00Z,inactive,code6,message6,504,Timeout
